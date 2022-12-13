@@ -1,4 +1,6 @@
-float side1, side2, side3, s , m;
+#include<stdio.h>
+int main()
+{ float side1, side2, side3, s , m;
     printf("\n \n#FOR TRIANGLE#\n");
     printf("enter first side of triangle: ");
     scanf("%f", &side1);
@@ -10,3 +12,4 @@ float side1, side2, side3, s , m;
     m = sqrt (s * (s-side1)*(s-side2)*(s-side3));
     printf("AREA=%f", m);
     printf("\ncircumference=%f", side1 + side2 + side3);
+}
