@@ -8,6 +8,7 @@ int main() {
     fp1 = fopen("news.txt", "r");
     if (fp1 == NULL) {
         printf("Error opening source file.\n");
+        fclose(fp1);
         return 1;
     }
 
@@ -15,7 +16,7 @@ int main() {
     fp2 = fopen("newsempty.txt", "w");
     if (fp2 == NULL) {
         printf("Error opening destination file.\n");
-        fclose(fp1);
+        fclose(fp2);
         return 1;
     }
 
@@ -32,3 +33,4 @@ printf("file copied successfully");
 
     return 0;
 }
+
