@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main() {
+    FILE *fp1, *fp2;
+    char ch;
+
+
+    fp1 = fopen("news.txt", "r");
+    if (fp1 == NULL) {
+        printf("Error opening source file.\n");
+        return 1;
+    }
+
+
+    fp2 = fopen("newsempty.txt", "w");
+    if (fp2 == NULL) {
+        printf("Error opening destination file.\n");
+        fclose(fp1);
+        return 1;
+    }
+
+
+    while ((ch = fgetc(fp1)) != EOF) {
+        fputc(ch, fp2);
+    }
+
+
+printf("file copied successfully");
+
+    fclose(fp1);
+    fclose(fp2);
+
+    return 0;
+}
