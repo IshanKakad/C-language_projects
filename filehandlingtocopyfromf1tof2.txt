@@ -9,7 +9,7 @@ int main() {
     if (fp1 == NULL) {
         printf("Error opening source file.\n");
         fclose(fp1);
-        return 1;
+        
     }
 
 
@@ -17,7 +17,7 @@ int main() {
     if (fp2 == NULL) {
         printf("Error opening destination file.\n");
         fclose(fp2);
-        return 1;
+       
     }
 
 
